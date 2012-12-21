@@ -5,7 +5,7 @@ using System.Collections;
 
 public class JavaBuildSettings : ScriptableObject
 {
-	const string kBuildSettingsPath = "Assets/JavaPluginBuilder/Editor/JavaBuildSettings.asset";
+	const string kBuildSettingsPath = "Assets/JavaBuildSettings.asset";
 
 
 	static JavaBuildSettings s_Instance;
