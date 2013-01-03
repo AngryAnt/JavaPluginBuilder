@@ -3,6 +3,7 @@ using UnityEditor;
 using System.Collections;
 
 
+[InitializeOnLoad]
 public class JavaBuildSettings : ScriptableObject
 {
 	const string kBuildSettingsPath = "Assets/JavaBuildSettings.asset";
@@ -35,6 +36,15 @@ public class JavaBuildSettings : ScriptableObject
 			}
 
 			return s_Instance;
+		}
+	}
+
+
+	static JavaBuildSettings ()
+	{
+		if (Instance == null)
+		{
+			Debug.LogError ("Failed to create build settings");
 		}
 	}
 
